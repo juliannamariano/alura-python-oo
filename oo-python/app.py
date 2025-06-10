@@ -1,4 +1,4 @@
-
+from modelos.restaurante import Restaurante 
 
 
 def main():
