@@ -12,6 +12,7 @@ class Restaurante:
         #com o "_" deixa o nosso atributo privado
         self._ativo = False
         self._avaliacao = []
+        self._cardapio = []
         Restaurante.restaurantes.append(self)
 
     def __str__(self):
@@ -42,6 +43,12 @@ class Restaurante:
         quantidade_de_notas = len(self._avaliacao)
         media = round(soma_das_notas / quantidade_de_notas, 1)
         return media
+    
+    def adicionar_bebida_no_cardapio(self, bebida):
+        self._cardapio.append(bebida)
+
+    def adicionar_prato_no_cardapio(self, prato):
+        self._cardapio.append(prato)
 
 #restaurante_praca = Restaurante('Praça', 'Gourmet')
 #restaurante_praca.alternar_estado()
